@@ -29,4 +29,10 @@ public class UserService {
 		return this.userRepository.insert(obj);
 	}
 	
+	public void delete(String id) {
+		this.findById(id);
+		this.userRepository.deleteById(id);
+	}
+
+	
 }
